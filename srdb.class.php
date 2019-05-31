@@ -208,7 +208,7 @@ class icit_srdb {
 	/**
 	 * @var bool whether sql queries will buffer or not
 	 */
-	public $buffer = false;
+	public $buffer = true;
 
 
 	/**
@@ -268,7 +268,7 @@ class icit_srdb {
 			'alter_engine' 		=> false,
 			'alter_collation' 	=> false,
 			'verbose'			=> false,
-			'buffer' => false,
+			'buffer' => true,
 		), $args );
 
 		// handle exceptions
@@ -496,7 +496,7 @@ class icit_srdb {
 			$connection = new PDO( "mysql:host={$this->host};port={$this->port};dbname={$this->name}", $this->user, $this->pass );
 
 			// For large datasets, don't buffer the query 
-			if ($this->get('buffer')) {
+			if ($this->get('buffer') === 'false' || $this->get('buffer') === false) {
 				$connection->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
 			}
 		} catch( PDOException $e ) {
