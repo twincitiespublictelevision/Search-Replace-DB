@@ -119,7 +119,9 @@ ARGS
     eg. utf8_unicode_ci. If specified search/replace arguments
     are ignored. They will not be run simultaneously.
   -v, --verbose [true|false]
-    Defaults to true, can be set to false to run script silently.
+		Defaults to true, can be set to false to run script silently.
+	-b, --buffer [true|false] 
+		Defautls to true, sets if MySQL queries in PDO will be buffered 
   --help
     Displays this help message ;)
 ";
