@@ -30,6 +30,7 @@ $opts = array(
 	'e:' => 'alter-engine:',
 	'a:' => 'alter-collation:',
 	'v:' => 'verbose:',
+	'b:' => 'buffer:',
 	'port:',
 	'help'
 );
