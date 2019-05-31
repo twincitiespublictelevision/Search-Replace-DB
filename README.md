@@ -133,6 +133,10 @@ Type `php srdb.cli.php` to run the program. Type `php srdb.cli.php --help` for u
 	
 		Defaults to true, can be set to false to run script silently.
 		
+	-b, --buffer [true|false]
+	
+		Defaults to true, sets if MySQL queries in PDO will be buffered.
+		
 	--help
 	
 		Displays this help message ;)
